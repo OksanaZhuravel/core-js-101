@@ -33,7 +33,8 @@ function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 function getStringLength(value) {
-  return value.length;
+  const result = value.length;
+  return result;
 }
 /**
  * Returns the result of string template and given parameters firstName and lastName.
@@ -49,7 +50,8 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-  return `Hello, ${firstName} ${lastName}`;
+  const result = `Hello, ${firstName} ${lastName}!`;
+  return result;
 }
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
@@ -175,7 +177,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(/* str */) {
-  // throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -202,7 +204,7 @@ function extractEmails(/* str */) {
  *
  */
 function getRectangleString(/* width, height */) {
-  // throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -222,7 +224,7 @@ function getRectangleString(/* width, height */) {
  *
  */
 function encodeToRot13(/* str */) {
-  // throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -239,7 +241,7 @@ function encodeToRot13(/* str */) {
  *   isString(new String('test')) => true
  */
 function isString(/* value */) {
-  // throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -267,7 +269,7 @@ function isString(/* value */) {
  *   'K♠' => 51
  */
 function getCardId(/* value */) {
-  // throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 module.exports = {
