@@ -18,7 +18,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-  let newString = value1 + value2;
+  const newString = value1 + value2;
   return newString;
 }
 /**
@@ -63,8 +63,8 @@ function getStringFromTemplate(firstName, lastName) {
  */
 function extractNameFromTemplate(value) {
   value.includes('Hello,');
-  let deleteHello = value.replace('Hello,', '').trim();
-  let result = deleteHello.replace('!', '').trim();
+  const deleteHello = value.replace('Hello,', '').trim();
+  const result = deleteHello.replace('!', '').trim();
   return result;
 }
 /**
@@ -78,7 +78,7 @@ function extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 function getFirstChar(value) {
-  let letter = value.charAt(0);
+  const letter = value.charAt(0);
   return letter;
 }
 
@@ -94,7 +94,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  let result = value.trim();
+  const result = value.trim();
   return result;
 }
 /**
@@ -109,7 +109,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(value, count) {
-  let result = value.repeat(count);
+  const result = value.repeat(count);
   return result;
 }
 /**
@@ -125,7 +125,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-  let result = str.replace(value, '');
+  const result = str.replace(value, '');
   return result;
 }
 /**
@@ -140,7 +140,7 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  let result = str.replace('<', '').replace('>', '');
+  const result = str.replace('<', '').replace('>', '');
   return result;
 }
 
@@ -155,7 +155,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-  let result = str.toUpperCase();
+  const result = str.toUpperCase();
   return result;
 }
 
