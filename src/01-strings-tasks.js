@@ -223,8 +223,13 @@ function getRectangleString(/* width, height */) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+  const result = str.replace(
+    /[a-z]/gi,
+    (letter) => alpha[alpha.indexOf(letter) + 13],
+  );
+  return result;
 }
 
 /**
@@ -240,10 +245,12 @@ function encodeToRot13(/* str */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  if (typeof value === 'string' || value instanceof String) {
+    return true;
+  }
+  return false;
 }
-
 /**
  * Returns playid card id.
  *
@@ -268,8 +275,50 @@ function isString(/* value */) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+
+function getCardId(value) {
+  const result = value.slice(0, 1);
+
+  if (result === 'A') {
+    return 0;
+  }
+  if (result === '2') {
+    return 1;
+  }
+  if (result === '3') {
+    return 2;
+  }
+  if (result === '4') {
+    return 3;
+  }
+  if (result === '5') {
+    return 4;
+  }
+  if (result === '6') {
+    return 5;
+  }
+  if (result === '7') {
+    return 6;
+  }
+  if (result === '8') {
+    return 7;
+  }
+  if (result === '9') {
+    return 8;
+  }
+  if (result === '1') {
+    return 9;
+  }
+  if (result === 'J') {
+    return 10;
+  }
+  if (result === 'Q') {
+    return 11;
+  }
+  if (result === 'K') {
+    return 12;
+  }
+  return 'this not playid card';
 }
 
 module.exports = {
